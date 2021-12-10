@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('clone repo and clean it') { 
             steps {
-                bat "mvn clean  newmaven"
+                bat "mvn clean  "
             }
         }
         stage('Test') { 
             steps {
-                bat "mvn test  newmaven" 
+                bat "mvn test  " 
             }
         }
         stage('Deploy') { 
             steps {
-                bat "mvn package  newmaven"
+                bat "mvn package  "
             }
         }
     }
